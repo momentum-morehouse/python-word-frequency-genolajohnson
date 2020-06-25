@@ -2,10 +2,10 @@ import re
 import string
 
 frequency = {}
-print("Here is the word frequency for 'Real Love' by        Mary J. Blige: ")
-document_text = open('real_love.txt', 'r')
+print("Here is the word frequency for 'Tennessee Whiskey' by Chris Stapleton: ")
+document_text = open('Tennessee_Whiskey.txt', 'r')
 text_string = document_text.read().lower()
-match_pattern = re.findall(r'\b[a-z]{3,15}\b', text_string)
+match_pattern = re.findall(r'\b[a-z]{1,15}\b', text_string)
 
 for word in match_pattern:
     count = frequency.get(word,0)
@@ -15,8 +15,6 @@ frequency_list = frequency.keys()
 
 for words in frequency_list:
     print(words, frequency[words])
-
-
 
 
 
